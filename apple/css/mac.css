@@ -1,0 +1,792 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(circle at top, #141414, #000); 
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* Navbar */
+.navbar {
+    width: 80%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(17,17,17,0.95);
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: 1px solid #2d004d;
+    box-shadow: 0 0 15px rgba(100,0,200,0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 28px;
+    height: 28px;
+}
+
+.logo span {
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.nav-links a:hover {
+    background: #1a1a1a;
+    color: #bb86fc;
+}
+
+.sidebar {
+    position: fixed;
+    left: 20px;
+    top: 100px;
+    width: 180px;
+    border-radius: 12px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    background: rgba(255,255,255,0.15);
+    color: #bb86fc;
+    transform: translateX(4px);
+}
+
+.main-content {
+    margin-left: 280px; 
+    margin-right: 40px; 
+    margin-top: 15px;
+    margin-bottom: 50px; 
+    padding: 20px;
+    width: calc(100% - 320px); 
+    max-width: 1400px; 
+}
+
+.apple-highlight {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.apple-highlight img {
+    width: 100px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+}
+
+.apple-highlight h2 {
+    font-size: 28px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+/* Mac Filter Tabs (แถบตัวกรอง) */
+.mac-filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mac-filter-tabs a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 18px;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.mac-filter-tabs a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mac-filter-tabs a.active {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+}
+
+/* --- CAROUSEL STYLES START --- */
+
+/* CAROUSEL WRAPPER */
+.product-carousel {
+    position: relative; 
+    padding-bottom: 50px; 
+    /* ซ่อนแถบเลื่อน (Scrollbar) ของเบราว์เซอร์หลัก */
+    overflow-x: hidden; 
+}
+
+/* Product Grid - ปรับให้เป็นแนวนอนและเลื่อนได้ */
+.product-grid {
+    display: flex; 
+    overflow-x: scroll; 
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    gap: 30px;
+    padding: 20px 0;
+    margin-right: -30px; 
+    scroll-behavior: smooth; 
+}
+
+/* ซ่อน Scrollbar ที่เกิดจากการเลื่อนแนวนอน */
+.product-grid::-webkit-scrollbar {
+    display: none; 
+}
+.product-grid {
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.product-card {
+    /* กำหนดขนาดของการ์ดให้คงที่ */
+    min-width: 320px; 
+    flex-shrink: 0; 
+    scroll-snap-align: start; 
+    
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.color-options {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* สีสำหรับรุ่นต่างๆ */
+.midnight { background-color: #000033; }
+.starlight { background-color: #E8DCC8; }
+.silver { background-color: #C0C0C0; }
+.space-gray { background-color: #3C3C3C; }
+.space-black { background-color: #171717; } 
+.red { background-color: #D62D20; }
+.orange { background-color: #FF6600; }
+.yellow { background-color: #FFD700; }
+.green { background-color: #6AA84F; }
+.blue { background-color: #1E90FF; }
+.purple { background-color: #6A0DAD; }
+.color-options.seven-colors .dot {
+    width: 8px;
+    height: 8px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 5px;
+    color: #bb86fc; 
+}
+
+.chip-info {
+    font-size: 14px;
+    color: #AAA;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #DDD;
+    height: 50px; 
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* ปุ่ม "ดูเพิ่มเติม" */
+.btn-detail {
+    background: #bb86fc; 
+    color: #1a1a1a;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-detail:hover {
+    background: #805aa3;
+}
+
+/* ลบปุ่ม "ซื้อ" ออก */
+.card-actions .link-detail {
+    display: none; 
+}
+
+
+/* Carousel Buttons - สไตล์ปุ่มลูกศร */
+.carousel-btn {
+    position: absolute;
+    bottom: 0; 
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.2); 
+    color: #555;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    transition: background 0.2s, opacity 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.prev-btn {
+    right: 60px; 
+}
+
+.next-btn {
+    right: 10px; 
+}
+
+/* Media Queries สำหรับการตอบสนอง (Responsive Design) */
+@media (max-width: 1200px) {
+    .navbar {
+        width: 90%;
+    }
+    .main-content {
+        margin-left: 280px; 
+        margin-right: 40px;
+        width: calc(100% - 320px);
+    }
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        display: none; 
+    }
+    .main-content {
+        /* เมื่อ sidebar หายไป ให้ใช้ margin-left/right: auto เพื่อจัดกึ่งกลาง */
+        margin-left: auto; 
+        margin-right: auto;
+        width: 90%;
+        max-width: 100%;
+        padding: 20px;
+    }
+    /* เมื่อ sidebar หายไป, ให้ carousel-btn อยู่มุมขวาด้านล่างของหน้าจอ */
+    .carousel-btn {
+        right: 20px; 
+        bottom: 20px;
+    }
+    .prev-btn {
+        right: 70px;
+    }
+}
+
+/* ************************************ */
+/* * ส่วน ทำความรู้จักกับ Mac ใหม่ CSS * */
+/* ************************************ */
+
+/* ส่วนหลัก */
+.mac-intro-section {
+    /* ใช้ margin เดียวกับ .main-content เพื่อให้จัดเรียงได้ถูกต้อง */
+    margin: 80px 40px 100px 280px; 
+    max-width: 1400px;
+}
+
+.mac-intro-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+/* Carousel Wrapper */
+.intro-carousel-wrapper {
+    position: relative;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+
+.intro-card-grid {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 15px; 
+    padding: 10px 0;
+    scroll-behavior: smooth; 
+}
+
+/* ซ่อน Scrollbar */
+.intro-card-grid::-webkit-scrollbar { display: none; }
+.intro-card-grid { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* รูปแบบการ์ด */
+.intro-card {
+    min-width: 23%; 
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    aspect-ratio: 9/16; 
+    transition: transform 0.3s;
+    background-color: #333; 
+}
+
+.intro-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image-container {
+    height: 100%;
+    position: relative;
+}
+
+.card-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    position: absolute;
+    top: 20px; 
+    left: 20px;
+    right: 20px;
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    pointer-events: none; 
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 5px 0 0;
+}
+
+/* ปุ่ม + (Detail Button) */
+.detail-btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+    line-height: 1;
+}
+
+.detail-btn:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+
+/* ปุ่มเลื่อน Carousel (ใช้ class แยกเพื่อไม่ให้ตีกับปุ่มเดิม) */
+.intro-carousel-wrapper .carousel-btn {
+    position: absolute;
+    bottom: 0; 
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.2); 
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    transition: background 0.2s, opacity 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.intro-carousel-wrapper .carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.intro-prev-btn {
+    right: 60px;
+}
+
+.intro-next-btn {
+    right: 10px;
+}
+
+/* --- Detail Modal (Pop-up) --- */
+.detail-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(10px);
+    z-index: 2000;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.detail-modal.show {
+    display: flex;
+}
+
+.detail-content {
+    background: #fff;
+    color: #000;
+    padding: 30px;
+    border-radius: 18px;
+    width: 90%;
+    max-width: 800px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    margin: auto; 
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.detail-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.detail-body h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.detail-body p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    width: 30px;
+    height: 30px;
+}
+
+.close-btn svg {
+    display: block;
+    fill: #333;
+}
+
+.detail-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.detail-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.detail-image .caption {
+    font-size: 12px;
+    color: #888;
+    margin-top: 10px;
+}
+
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .mac-intro-section {
+        margin-left: 280px;
+    }
+    .intro-card {
+        min-width: 30%; 
+    }
+}
+
+@media (max-width: 900px) {
+    /* ปรับ margin สำหรับ Intro Section เมื่อ Sidebar หายไป */
+    .mac-intro-section {
+        margin: 50px auto;
+        width: 90%;
+        padding: 0;
+    }
+    .intro-card {
+        min-width: 45%; 
+    }
+    /* ปรับตำแหน่งปุ่มเลื่อนของ Intro Carousel ให้เข้ากัน */
+    .intro-carousel-wrapper .carousel-btn {
+        right: 20px; 
+    }
+    .intro-prev-btn {
+        right: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .intro-card {
+        min-width: 80%; 
+    }
+}
+
+/* เนื้อหาเดิมใน mac.css ... */
+
+/* ************************************ */
+/* * ส่วน ปลดล็อกโลกของ Apple ใหม่ CSS * */
+/* ************************************ */
+
+.apple-ecosystem-section {
+    /* ใช้ margin เดียวกับ .main-content */
+    margin: 80px 40px 100px 280px; 
+    max-width: 1400px;
+}
+
+.apple-ecosystem-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.ecosystem-container {
+    display: flex;
+    gap: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 18px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ecosystem-accordion-wrapper {
+    flex: 1;
+    min-width: 350px;
+}
+
+.accordion-item {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.accordion-header:hover {
+    color: #bb86fc;
+}
+
+.icon-arrow {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    transform: rotate(45deg);
+    transition: transform 0.3s;
+}
+
+.accordion-item.active .icon-arrow {
+    transform: rotate(225deg); 
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    padding-top: 0;
+}
+
+.accordion-content p {
+    font-size: 14px;
+    color: #DDD;
+    line-height: 1.6;
+    padding: 10px 0 10px 0;
+}
+
+/* Image Display */
+.ecosystem-image-display {
+    flex: 2;
+    min-width: 400px;
+    position: relative;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.ecosystem-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.ecosystem-image.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .apple-ecosystem-section {
+        margin: 50px auto;
+        width: 90%;
+        padding: 0;
+    }
+    .ecosystem-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+    .ecosystem-image-display {
+        min-height: 400px;
+        min-width: 100%;
+    }
+}
