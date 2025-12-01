@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Razer BlackWidow V4 Pro - Internet Hub</title>
+<link rel="stylesheet" href="css/Razer BlackWidow V4 Pro.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="image/Logo/Logo.webp" alt="Logo">
+        <span>Internet hub</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="../../home.html">Home</a>
+      <a href="../../apple/apple.html">Apple</a>
+      <a href="../../Notebook/Notebook.html">Notebook</a>
+      <a href="../../Computer hardware/Computer hardware.html">Computer hardware</a>
+      <a href="../../Accessories/Accessories.html">อุปกรณ์เสริม</a>
+    </div>
+  </nav>
+
+  <img src="image/Razer BlackWidow V4 Pro/Razer BlackWidow V4 Pro.webp" alt="Razer BlackWidow V4 Pro" class="full-width-banner">
+
+  <section class="product-intro">
+    <h3 class="sub-headline">RAZER BLACKWIDOW V4 PRO</h3>
+    <h1 class="main-headline rainbow-text">
+      FULL-BLOWN BATTLESTATION<br>
+      IMMERSION
+    </h1>
+    <p class="description">
+      Empower your play with a centerpiece that elevates your entire setup. Enter the next phase of battlestation evolution
+      with the ultimate mechanical gaming keyboard. Take full command with a set of features designed for advanced
+      control, and enhance your immersion with full-blown Razer Chroma™ RGB.
+    </p>
+    <div class="icon-container">
+      <img src="image/Razer BlackWidow V4 Pro/experience-razerstore-icons.webp" alt="Features Icons" class="feature-icons"> 
+    </div>
+  </section>
+
+  <section class="video-section">
+    <div class="video-container">
+      <video width="100%" autoplay muted loop playsinline>
+        <source src="image/Razer BlackWidow V4 Pro/Razer BlackWidow V4 Pro _ Full-Blown Battlestation Immersion.mp4" type="video/mp4">
+        browser ของคุณไม่รองรับการเล่นวิดีโอ
+      </video>
+    </div>
+  </section>
+
+  <section class="chroma-section">
+    <h2 class="chroma-headline rainbow-text">
+      IMMERSIVE UNDERGLOW AND PER-KEY LIGHTING
+    </h2>
+    <h3 class="chroma-subhead">Powered By Razer Chroma™ RGB</h3>
+    <p class="chroma-description">
+      Featuring per-key lighting and a striking underglow that highlights the keyboard from more angles, sync it with your
+      battlestation and enjoy greater immersion for hundreds of integrated games.
+    </p>
+    <div class="chroma-logo-container">
+      <img src="image/Razer BlackWidow V4 Pro/logo-chroma.webp" alt="Razer Chroma RGB" class="chroma-logo">
+    </div>
+  </section>
+
+  <div class="video-end-container">
+      <video id="introVideo" class="full-width-media" autoplay muted playsinline>
+          <source src="image/Razer BlackWidow V4 Pro/razer-blackwidow-v4-pro-command-dial-video.mp4" type="video/mp4">
+      </video>
+      <img id="endImage" src="image/Razer BlackWidow V4 Pro/videoframe_1560.png" alt="Final Image" class="full-width-media hidden">
+  </div>
+
+  <section class="dial-section">
+    <h2 class="section-title">RAZER™ COMMAND DIAL</h2>
+    
+    <div class="dial-tabs">
+        <button class="tab-btn active" onclick="switchMainTab('default', this)">DEFAULT MODES</button>
+        <button class="tab-btn" onclick="switchMainTab('refined', this)">REFINED CONTROL</button>
+        <button class="tab-btn" onclick="switchMainTab('custom', this)">CUSTOM MODES</button>
+    </div>
+
+    <div id="content-default" class="main-tab-content active">
+        <p class="dial-intro">
+            Press the dial to toggle between each mode or hold SHIFT while pressing to return to the previous one.
+            Easily Identify which mode the dial is currently on with mode-specific backlight.
+        </p>
+
+        <div class="dial-container">
+            <div class="side-menu left">
+                <div class="menu-item active" onclick="changeMode('brightness')">
+                    <img src="image/Razer BlackWidow V4 Pro/icons/icons1.svg" alt="Brightness" class="icon-img">
+                    <span>Keyboard Brightness</span>
+                </div>
+                <div class="menu-item" onclick="changeMode('zoom')">
+                    <img src="image/Razer BlackWidow V4 Pro/icons/icons2.svg" alt="Zoom" class="icon-img">
+                    <span>Zoom</span>
+                </div>
+                <div class="menu-item" onclick="changeMode('apps')">
+                    <img src="image/Razer BlackWidow V4 Pro/icons/icons3.svg" alt="Switch Apps" class="icon-img">
+                    <span>Switch Apps</span>
+                </div>
+                <div class="menu-item" onclick="changeMode('tabs')">
+                    <img src="image/Razer BlackWidow V4 Pro/icons/icons4.svg" alt="Switch Tabs" class="icon-img">
+                    <span>Switch Browser Tabs</span>
+                </div>
+            </div>
+
+            <div class="center-display">
+                <div class="video-frame">
+                    <video id="dialVideo" autoplay muted loop playsinline>
+                        <source src="image/Razer BlackWidow V4 Pro/icons/Keyboard Brightness.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+
+            <div class="side-menu right">
+                <div class="menu-item" onclick="changeMode('jogging')">
+                    <img src="image/Razer BlackWidow V4 Pro/icons/icons5.svg" alt="Track Jogging" class="icon-img">
+                    <span>Track Jogging</span>
+                </div>
+                <div class="menu-item" onclick="changeMode('selector')">
+                    <img src="image/Razer BlackWidow V4 Pro/icons/icons6.svg" alt="Track Selector" class="icon-img">
+                    <span>Track Selector</span>
+                </div>
+                <div class="menu-item" onclick="changeMode('h-scroll')">
+                    <img src="image/Razer BlackWidow V4 Pro/icons/icons7.svg" alt="Horizontal Scroll" class="icon-img">
+                    <span>Horizontal Scroll</span>
+                </div>
+                <div class="menu-item" onclick="changeMode('v-scroll')">
+                    <img src="image/Razer BlackWidow V4 Pro/icons/icons8.svg" alt="Vertical Scroll" class="icon-img">
+                    <span>Vertical Scroll</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="dynamic-description">
+            <h3 id="modeTitle" class="mode-title">Keyboard Brightness</h3>
+            <p id="modeDesc" class="mode-text">Adjust the level of Razer™ Chroma RGB lighting.</p>
+        </div>
+    </div>
+
+    <div id="content-refined" class="main-tab-content" style="display: none;">
+        <p class="dial-intro">
+            Experience truly granular control with a dial featuring 30 steps per revolution, finished with a machined texture along its sides for better grip.
+        </p>
+        <img src="image/Razer BlackWidow V4 Pro/icons/Refined Control.webp" alt="Refined Control" class="full-width-media">
+    </div>
+
+    <div id="content-custom" class="main-tab-content" style="display: none;">
+        <p class="dial-intro">
+            Create and store up to 100 modes via Razer Synapse. Assign a dedicated backlight for your custom mode and map any function to the clockwise and anti-clockwise turns of the dial.
+        </p>
+        <img src="image/Razer BlackWidow V4 Pro/icons/Custom Modes.webp" alt="Custom Modes" class="full-width-media">
+    </div>
+
+  </section>
+
+
+
+  <section class="switches-section">
+    <div class="switches-text-container">
+        <h3 class="switch-headline">Quick, Precise Execution</h3>
+        
+        <p class="switch-description">
+          Choose between three switches that offer their own distinct feel. Go for the Green Switch for clicky, tactile feedback,
+          the Orange Switch for quiet, tactile keystrokes, or the Yellow Switch for smooth, silent actuation.
+        </p>
+    </div>
+
+    <img src="image/Razer BlackWidow V4 Pro/Quick, Precise Execution/Quick, Precise Execution.webp" alt="Razer Mechanical Switches" class="full-width-media">
+  </section>
+
+
+
+
+  <section class="wrist-rest-section">
+    <div class="wrist-rest-text-container">
+        <h2 class="wrist-headline rainbow-text">
+            MAGNETIC PLUSH LEATHERETTE WRIST REST<br>
+            WITH UNDERGLOW
+        </h2>
+        
+        <h3 class="wrist-subhead">Extra Gaming Comfort And Flair</h3>
+        
+        <p class="wrist-description">
+            Designed to provide secure support for long hours of play, the soft, cushioned wrist rest also features Razer Chroma™ RGB—which perfectly lines up with the keyboard’s underglow.
+        </p>
+    </div>
+
+    <img src="image/Razer BlackWidow V4 Pro/Quick, Precise Execution/MAGNETIC PLUSH LEATHERETTE WRIST REST WITH UNDERGLOW/razer-blackwidow-v4-pro-wrist-rest-1920x700.webp" alt="Magnetic Plush Leatherette Wrist Rest" class="full-width-media">
+  </section>
+
+
+
+
+  <section class="keycaps-section">
+    <div class="keycaps-text-container">
+        <h2 class="keycaps-headline">DOUBLESHOT ABS KEYCAPS</h2>
+        
+        <h3 class="keycaps-subhead">Withstands Intense Use</h3>
+        
+        <p class="keycaps-description">
+            Using a doubleshot molding process to ensure the labelling never wears off, the keycaps also have extra-thick walls
+            which make them extremely tough to withstand intense gaming.
+        </p>
+    </div>
+
+    <img src="image/Razer BlackWidow V4 Pro/Quick, Precise Execution/MAGNETIC PLUSH LEATHERETTE WRIST REST WITH UNDERGLOW/DOUBLESHOT ABS KEYCAPS.webp" alt="Doubleshot ABS Keycaps" class="full-width-media">
+  </section>
+
+
+
+  <section class="media-keys-section">
+    <div class="media-keys-text-container">
+        <h2 class="media-headline">MULTI-FUNCTION ROLLER AND 4 MEDIA KEYS</h2>
+        
+        <h3 class="media-subhead">Convenient Control</h3>
+        
+        <p class="media-description">
+            Pause, play, skip and tweak everything from brightness to volume—the ultimate convenience as you enjoy your entertainment.
+        </p>
+    </div>
+
+    <img src="image/Razer BlackWidow V4 Pro/Quick, Precise Execution/MAGNETIC PLUSH LEATHERETTE WRIST REST WITH UNDERGLOW/MULTI-FUNCTION ROLLER AND 4 MEDIA KEYS.webp" alt="Multi-Function Roller and Media Keys" class="full-width-media">
+  </section>
+
+  <script src="js/Razer BlackWidow V4 Pro.js"></script>
+
+</body>
+</html>

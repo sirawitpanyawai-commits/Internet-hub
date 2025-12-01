@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet Hub - G502 X PLUS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Sarabun:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/G502 X PLUS.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="image/Logo/Logo.webp" alt="Logo">
+                <span>Internet hub</span>
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="../../home.html">Home</a>
+            <a href="../../apple/apple.html">Apple</a>
+            <a href="../../Notebook/Notebook.html">Notebook</a>
+            <a href="../../Computer hardware/Computer hardware.html">Computer hardware</a>
+            <a href="../../Accessories/Accessories.html">อุปกรณ์เสริม</a>
+        </div>
+    </nav>
+
+    <div class="product-container">
+        
+        <div class="product-gallery">
+            <div class="main-image-box">
+                <img id="current-image" src="image/G502 X PLUS/G502 X PLUS1.webp" alt="G502 X PLUS Main">
+                <div class="ar-badge" onclick="toggleZoom()">ซูม</div>
+            </div>
+            
+            <div class="thumbnail-row">
+                <img class="thumb active" src="image/G502 X PLUS/G502 X PLUS1.webp" data-white="image/G502 X PLUS/G502 X PLUS1.webp" data-black="image/G502 X PLUS/G502 X PLUS7.webp" onclick="changeImage(this)">
+                <img class="thumb" src="image/G502 X PLUS/G502 X PLUS2.webp" data-white="image/G502 X PLUS/G502 X PLUS2.webp" data-black="image/G502 X PLUS/G502 X PLUS8.webp" onclick="changeImage(this)">
+                <img class="thumb" src="image/G502 X PLUS/G502 X PLUS3.webp" data-white="image/G502 X PLUS/G502 X PLUS3.webp" data-black="image/G502 X PLUS/G502 X PLUS9.webp" onclick="changeImage(this)">
+                <img class="thumb" src="image/G502 X PLUS/G502 X PLUS4.webp" data-white="image/G502 X PLUS/G502 X PLUS4.webp" data-black="image/G502 X PLUS/G502 X PLUS10.webp" onclick="changeImage(this)">
+                <img class="thumb" src="image/G502 X PLUS/G502 X PLUS5.webp" data-white="image/G502 X PLUS/G502 X PLUS5.webp" data-black="image/G502 X PLUS/G502 X PLUS11.webp" onclick="changeImage(this)">
+                <img class="thumb" src="image/G502 X PLUS/G502 X PLUS6.webp" data-white="image/G502 X PLUS/G502 X PLUS6.webp" data-black="image/G502 X PLUS/G502 X PLUS12.webp" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <div class="product-details">
+            <h1>G502 X PLUS</h1>
+            <p class="subtitle">เมาส์เกมมิ่งไร้สาย LIGHTSPEED พร้อม LIGHTSYNC RGB</p>
+
+            <div class="color-selection">
+                <div class="color-option white active" onclick="selectColor('white')" title="สีขาว"></div>
+                <div class="color-option black" onclick="selectColor('black')" title="สีดำ"></div>
+                <span id="color-name">สีดำ</span>
+            </div>
+
+            <div class="product-description">
+                <p>G502 X PLUS คือผลิตภัณฑ์รุ่นใหม่ล่าสุดของตระกูล G502 ในตำนาน คิดค้นขึ้นใหม่ด้วยสวิตช์ไฮบริด LIGHTFORCE รุ่นแรกของเรา, ระบบไร้สายเกรดโปร LIGHTSPEED LIGHTSYNC RGB, เซ็นเซอร์ HERO 25K และอีกมากมาย</p>
+            </div>
+
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        สเปคและรายละเอียด
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p><strong>ขนาด</strong></p>
+                            <ul style="margin-bottom: 15px;">
+                                <li><strong>ความสูง:</strong> 41.1 มม.</li>
+                                <li><strong>ความกว้าง:</strong> 79.2 มม.</li>
+                                <li><strong>ยาว:</strong> 131.4 มม.</li>
+                                <li><strong>น้ำหนัก:</strong> 106 กรัม</li>
+                            </ul>
+                            <p><strong>ข้อมูลการรับประกัน</strong></p>
+                            <ul>
+                                <li>การรับประกันแบบจำกัด 2 ปีสำหรับฮาร์ดแวร์</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        ความเข้ากันได้
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <p><strong>ความเข้ากันได้กับแพลตฟอร์ม</strong></p>
+                            <ul>
+                                <li>Windows® 10 หรือใหม่กว่า</li>
+                                <li>macOS 10.14 หรือใหม่กว่า</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this)">
+                        ภายในกล่อง
+                        <span class="icon">+</span>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="content-inner">
+                            <ul>
+                                <li>เมาส์เกมมิ่งไร้สาย G502 X PLUS LIGHTSPEED</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-section-container">
+        <h2 class="video-header-text">พบกับ G502 X PLUS</h2>
+        
+        <div class="video-banner-box" onclick="openVideo('image/G502 X PLUS/G502/mc.mp4')">
+            <img src="image/G502 X PLUS/G502/G502" alt="Play Video" class="video-cover-img"> <div class="big-play-button">
+                <div class="play-triangle"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="features-section">
+        <div class="features-container">
+            <h2 class="features-title">เอกลักษณ์ ที่คิดค้นขึ้นใหม่</h2>
+            <p class="features-desc">
+                G502 X PLUS คือผลิตภัณฑ์รุ่นใหม่ล่าสุดของตระกูล G502 ในตำนาน พลิกโฉมและคิดค้นขึ้นใหม่ด้วยเทคโนโลยีเกมมิ่งนวัตกรรมใหม่ล่าสุด
+            </p>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <img src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/LIGHTFORCE.webp" alt="Lightforce" class="feature-icon">
+                    <div class="feature-text">
+                        <h3>สวิตช์<br>LIGHTFORCE</h3>
+                        <p>ไฮบริดออปติคอล X แมกคานิคอล</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <img src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/LIGHTSYNC.webp" alt="RGB" class="feature-icon">
+                    <div class="feature-text">
+                        <h3>LIGHTSYNC<br>RGB</h3>
+                        <p>การตรวจจับการเล่นที่ประหยัดพลังงาน</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <img src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/LIGHTSPEED.webp" alt="Wireless" class="feature-icon">
+                    <div class="feature-text">
+                        <h3>ระบบไร้สาย<br>LIGHTSPEED</h3>
+                        <p>เร็วกว่ารุ่นก่อน 68%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="explore-section">
+        <h2 class="explore-title">สำรวจกลุ่มผลิตภัณฑ์ G502 X</h2>
+        
+        <div class="video-banner-box" onclick="openVideo('image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/สำรวจกลุ่มผลิตภัณฑ์ G502 X/มุมมองภายใน_ คุณสมบัติเมาส์เกมมิ่ง Logitech G502 X th.mp4')">
+            
+            <img src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/สำรวจกลุ่มผลิตภัณฑ์ G502 X/สำรวจกลุ่มผลิตภัณฑ์ G502 X" alt="Explore G502 X" class="video-cover-img"> <div class="big-play-button">
+                <div class="play-triangle"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="full-feature-section">
+        
+        <div class="full-feature-row" style="background-image: url('image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/สำรวจกลุ่มผลิตภัณฑ์ G502 X/3/3.1.webp');">
+            <div class="full-feature-content right">
+                <img src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/LIGHTFORCE.webp" alt="Icon" class="feature-icon-small">
+                <h3>สวิตช์ LIGHTFORCE</h3>
+                <p>ไฮบริดออปติคอล-แมกคานิคอลที่ก้าวล้ำนำหน้าด้วยความเร็วและความน่าเชื่อถือจากการทำงานของออปติคอล</p>
+            </div>
+        </div>
+
+        <div class="full-feature-row" style="background-image: url('image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/สำรวจกลุ่มผลิตภัณฑ์ G502 X/3/3.2.webp');">
+            <div class="full-feature-content left">
+                <img src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/LIGHTSYNC.webp" alt="Icon" class="feature-icon-small">
+                <h3>LIGHTSYNC RGB</h3>
+                <p>เทคโนโลยี LIGHTSYNC ช่วยให้คุณควบคุมแสงไฟไดนามิกครบสเปกตรัมประมาณ 16.8 ล้านสีได้อย่างเต็มที่</p>
+            </div>
+        </div>
+
+        <div class="full-feature-row" style="background-image: url('image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/สำรวจกลุ่มผลิตภัณฑ์ G502 X/3/3.4.webp');">
+            <div class="full-feature-content right">
+                <img src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/LIGHTSPEED.webp" alt="Icon" class="feature-icon-small">
+                <h3>ระบบไร้สาย LIGHTSPEED</h3>
+                <p>การเชื่อมต่อเกรดโปร ตอนนี้มาพร้อมโปรโตคอลอัปเดตที่ให้อัตราการตอบสนองเร็วกว่ารุ่นก่อนถึง 68%</p>
+            </div>
+        </div>
+        
+        <div class="full-feature-row" style="background-image: url('image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/สำรวจกลุ่มผลิตภัณฑ์ G502 X/3/3.3.webp');">
+            <div class="full-feature-content left">
+                <img src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/HERO 25K.webp" alt="Icon" class="feature-icon-small">
+                <h3>เซ็นเซอร์ HERO 25K</h3>
+                <p>เซ็นเซอร์เกมมิ่งขั้นสูงที่สุดของเราให้ความแม่นยำระดับซับไมครอน พร้อมความราบรื่น การกรอง และความเร่งระดับศูนย์</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-feature-section">
+        
+        <div class="grid-row">
+            <div class="grid-media">
+                <video autoplay loop muted playsinline>
+                    <source src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/สำรวจกลุ่มผลิตภัณฑ์ G502 X/3/4/ปุ่มเปลี่ยน DPI ปรับได้.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="grid-text">
+                <h3>ปุ่มเปลี่ยน DPI ปรับได้</h3>
+                <p>เราออกแบบปุ่มเปลี่ยน DPI ใหม่ เพื่อให้คุณเลือกการกำหนดค่าให้เหมาะกับการจับและสไตล์ของคุณ</p>
+            </div>
+        </div>
+
+        <div class="grid-row reverse"> 
+            <div class="grid-text">
+                <h3>ล้อเลื่อนโหมดคู่</h3>
+                <p>หมุนล้อเลื่อนที่มีน้ำหนักเบาอย่างอิสระในโหมด hyperfast เมื่อต้องการหมุนไปอย่างรวดเร็ว</p>
+            </div>
+            <div class="grid-media">
+                <video autoplay loop muted playsinline>
+                    <source src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/สำรวจกลุ่มผลิตภัณฑ์ G502 X/3/4/ล้อเลื่อนโหมดคู่.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+        <div class="grid-row">
+            <div class="grid-media">
+                <video autoplay loop muted playsinline>
+                    <source src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/สำรวจกลุ่มผลิตภัณฑ์ G502 X/3/4/เข้ากันได้กับ POWERPLAY.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="grid-text">
+                <h3>เข้ากันได้กับ POWERPLAY</h3>
+                <p>ครอบครอง G502 X PLUS ไร้สาย และพร้อมเล่นตลอดเวลา ด้วยโซลูชันการชาร์จไร้สายเฉพาะของเรา POWERPLAY</p>
+            </div>
+        </div>
+
+        <div class="grid-row reverse">
+            <div class="grid-text">
+                <h3>ทางเลือกเป็นของคุณ</h3>
+                <p>เมาส์ G502 X เป็นรุ่นแรกในตระกูล G502 ที่มาพร้อมสองสี: สีดำและสีขาว เลือกสไตล์ของคุณ</p>
+            </div>
+            <div class="grid-media">
+                <img src="image/G502 X PLUS/G502/เอกลักษณ์ ที่คิดค้นขึ้นใหม่/สำรวจกลุ่มผลิตภัณฑ์ G502 X/3/4/ทางเลือกเป็นของคุณ.webp" alt="Color Choice">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="video-modal" class="video-modal" onclick="closeVideoOutside(event)">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVideo()">×</span>
+            <div class="video-wrapper">
+                <video id="local-video" controls>
+                    เบราว์เซอร์ของคุณไม่รองรับการเล่นวิดีโอ
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/G502 X PLUS.js"></script>
+</body>
+</html>

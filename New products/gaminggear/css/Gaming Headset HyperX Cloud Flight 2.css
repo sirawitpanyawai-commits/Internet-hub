@@ -1,0 +1,386 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0a0014 0%, #1a0a2e 50%, #0a0014 100%);
+  background-attachment: fixed;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.navbar {
+  width: 80%;
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(17, 10, 30, 0.95);
+  border-radius: 8px;
+  padding: 10px 20px;
+  border: 1px solid #6b2d9e;
+  box-shadow: 0 0 15px rgba(139, 69, 255, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 28px;
+  height: 28px;
+}
+
+.logo span {
+  font-weight: bold;
+  color: #d4a5ff;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: rgba(139, 69, 255, 0.3);
+  color: #d4a5ff;
+  box-shadow: inset 0 1px 0 #ffffff20;
+}
+
+.product-container {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.product-gallery {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  gap: 20px;
+}
+
+.thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.thumb-item {
+  width: 60px;
+  height: 60px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.thumb-item.active {
+  border-color: #d4a5ff;
+}
+
+.thumb-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.main-image {
+  flex-grow: 1;
+  background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 70%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.main-image img {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+}
+
+.product-details {
+  flex: 1;
+  min-width: 300px;
+  padding-top: 20px;
+}
+
+.product-details h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.3;
+  text-shadow: 0 0 10px rgba(139, 69, 255, 0.3);
+}
+
+.feature-list {
+  list-style-position: inside;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.feature-list li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e0e0e0;
+}
+
+.color-selection p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.color-options {
+  display: flex;
+  gap: 10px;
+}
+
+.color-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid #444;
+  transition: all 0.3s ease;
+}
+
+.color-box.black {
+  background-color: #000;
+}
+
+.color-box.selected {
+  border-color: #fff;
+  box-shadow: 0 0 0 2px #d4a5ff;
+}
+
+.color-box:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+  
+  .product-gallery {
+    width: 100%;
+  }
+}
+
+.feature-section {
+  width: 100%;
+  padding: 60px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.feature-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.feature-text {
+  flex: 1.2;
+  min-width: 300px;
+}
+
+.feature-text h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(139, 69, 255, 0.5);
+}
+
+.feature-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #d1d1d1;
+  text-align: justify;
+}
+
+.feature-grid {
+  flex: 1;
+  min-width: 300px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  align-content: start;
+}
+
+.grid-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 165, 255, 0.3);
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #fff;
+  transition: transform 0.3s ease, background 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.grid-item:hover {
+  background: rgba(139, 69, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 900px) {
+  .feature-container {
+    flex-direction: column;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+@media (max-width: 600px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature-text h2 {
+    font-size: 28px;
+  }
+}
+
+.zigzag-section {
+  padding: 80px 0;
+  background-color: transparent;
+}
+
+.zigzag-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.zigzag-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.zigzag-item:nth-child(even) {
+  flex-direction: row-reverse; 
+}
+
+.zigzag-image {
+  flex: 1;
+  max-width: 500px;
+  position: relative;
+}
+
+.zigzag-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: polygon(
+    10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%
+  );
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.zigzag-image:hover img {
+  transform: scale(1.02);
+  filter: brightness(1.1);
+}
+
+.zigzag-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.zigzag-content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.zigzag-content h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #8b45ff, #d4a5ff);
+  border-radius: 2px;
+}
+
+.zigzag-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #d1d1d1;
+}
+
+@media (max-width: 900px) {
+  .zigzag-item {
+    flex-direction: column !important;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .zigzag-content h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .zigzag-image {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .zigzag-container {
+    gap: 60px;
+  }
+}
